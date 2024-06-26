@@ -1,4 +1,4 @@
-const apikey = "ab78ef422b25a7c7d9fe143158c63595";
+const API = "ab78ef422b25a7c7d9fe143158c63595";
 
 const weatherDataEl = document.querySelector("#weather-data")
 
@@ -15,7 +15,7 @@ formEl.addEventListener("submit", (event)=>{
 
 async function getWeatherData(cityValue) {
     try {
-        const response = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apikey}&units=metric`)
+        const response = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${API}&units=metric`)
         
         if (!response.ok) {
             throw new Error("Network response was not ok")
